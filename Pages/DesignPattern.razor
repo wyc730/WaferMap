@@ -1,0 +1,22 @@
+﻿@page "/designpattern"
+<h3>DesignPattern</h3>
+<select @onchange=@DoStuff>
+    <option value="Flyweight">FlyWeight 享元模式</option>
+    <option>Cat</option>
+    <option>Hamster</option>
+    <option>Parrot</option>
+    <option>Spider</option>
+    <option>Goldfish</option>
+</select>
+@code {
+
+
+
+    void DoStuff(ChangeEventArgs e)
+    {
+        if (e.Value.ToString() == "Flyweight")
+        { 
+            
+        }
+    }
+}

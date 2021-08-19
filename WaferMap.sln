@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaferMap", "WaferMap.csproj", "{E2576820-D7F6-479D-B4C3-D10F093A545C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaferMapTest", "WaferMapTest\WaferMapTest.csproj", "{56F833A5-9357-4B15-A3AA-ED3368D4A7B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2576820-D7F6-479D-B4C3-D10F093A545C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2576820-D7F6-479D-B4C3-D10F093A545C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2576820-D7F6-479D-B4C3-D10F093A545C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2576820-D7F6-479D-B4C3-D10F093A545C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F833A5-9357-4B15-A3AA-ED3368D4A7B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F833A5-9357-4B15-A3AA-ED3368D4A7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F833A5-9357-4B15-A3AA-ED3368D4A7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F833A5-9357-4B15-A3AA-ED3368D4A7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5BE9874-8639-4B82-A5BF-67EC0650C5A8}
+	EndGlobalSection
+EndGlobal
