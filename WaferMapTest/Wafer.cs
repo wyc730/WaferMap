@@ -22,5 +22,14 @@ namespace WaferMapTest
             WaferDataType = waferDataType;
             WaferSize = waferSize;
         }
+        public string[][] GetMapData()
+        {
+            return Map.GetMapData(WaferID,WaferDataType);
+        }
+        public void Draw()
+        {
+            Map.Draw(GetMapData());
+        }
+
     }
 }

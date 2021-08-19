@@ -15,7 +15,7 @@ namespace WaferMapTest
     public class WaferDataProxy
     {
         Hashtable proxyData = new Hashtable();
-        int refreshCount = 5;
+        int refreshCount = 2;
         int refreshSeconds = 60;
 
         private static WaferDataProxy waferDataProxy=new WaferDataProxy();
@@ -125,7 +125,7 @@ namespace WaferMapTest
                 mapData[i] = new string[size];
                 for (int x = 0; x < size; x++)
                 {
-                    mapData[i][x] = (new Random().Next(1, size * size)/100).ToString()+" inch";
+                    mapData[i][x] = (new Random().Next(1, size * size)).ToString()+ " µm";
                 }
             }
             return mapData;

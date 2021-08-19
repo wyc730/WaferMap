@@ -1,22 +1,62 @@
 ﻿@page "/designpattern"
-<h3>DesignPattern</h3>
+@using WaferMapTest; 
+<h3>WaferID</h3>
 <select @onchange=@DoStuff>
-    <option value="Flyweight">FlyWeight 享元模式</option>
-    <option>Cat</option>
-    <option>Hamster</option>
-    <option>Parrot</option>
-    <option>Spider</option>
-    <option>Goldfish</option>
+    <option value="">請選擇 Wafer </option>
+    <option value="A01,Small,WaferBinData">A01(3 inch) AOI 分級</option>
+    <option value="A02,Middle,WaferBinData">A02(4 inch) AOI 分級</option>
+    <option value="A03,Big,WaferMeasureData">A03(6 inch) 厚度量測</option>
 </select>
+    @{ if (mapData != null)
+        {
+    <table class="table" >
+        <thead>
+            <tr>
+                @{
+                    for (int i = 0; i <= mapData.Length; i++)
+                    {
+                        <td> @(i>0?"x["+i.ToString()+"]":"") </td>
+                    }
+
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @{
+
+                for (int i = 0; i < mapData.Length; i++)
+                {
+                        <tr>
+                            <td> y[@(i+1)] </td>
+                            @for (int j = 0; j < mapData[i].Length; j++)
+                            {
+                                <td> @mapData[i][j] </td>
+                            }
+                        </tr>
+                }
+                
+            }
+        </tbody>
+    </table>
+        } 
+    }
+
 @code {
 
+    string[][] mapData = null;
 
 
     void DoStuff(ChangeEventArgs e)
     {
-        if (e.Value.ToString() == "Flyweight")
-        { 
-            
+        mapData = null;
+        if (e.Value.ToString() != "")
+        {
+            string waferID = e.Value.ToString().Split(',')[0];
+            WaferSize waferSize = (WaferSize)Enum.Parse(typeof(WaferSize),e.Value.ToString().Split(',')[1]);
+            WaferDataType waferDataType = (WaferDataType)Enum.Parse(typeof(WaferDataType), e.Value.ToString().Split(',')[2]);
+
+            Wafer wafer = new Wafer(waferID, waferDataType, waferSize);
+            mapData=wafer.GetMapData();
         }
     }
 }
